@@ -1,0 +1,12 @@
+[submodule "01.01 ExternalLibrary/SDL"]
+	path = 01.01 ExternalLibrary/SDL
+	url = https://github.com/libsdl-org/SDL.git
+[submodule "01.01 ExternalLibrary/json"]
+	path = 01.01 ExternalLibrary/json
+	url = https://github.com/nlohmann/json.git
+[submodule "01.01 ExternalLibrary/DPP"]
+	path = 01.01 ExternalLibrary/DPP
+	url = https://github.com/brainboxdotcc/DPP.git
+[submodule "01.01 ExternalLibrary/spdlog"]
+	path = 01.01 ExternalLibrary/spdlog
+	url = https://github.com/gabime/spdlog.git
