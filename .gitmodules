@@ -10,3 +10,6 @@
 [submodule "01.01 ExternalLibrary/spdlog"]
 	path = 01.01 ExternalLibrary/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "01.01 ExternalLibrary/tgbot-cpp"]
+	path = 01.01 ExternalLibrary/tgbot-cpp
+	url = https://github.com/reo7sp/tgbot-cpp.git

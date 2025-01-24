@@ -3,5 +3,8 @@
 /.vscode/
 
 #file_type
-.csv
+*.csv
+*.CSV
+*.ENV
+*.env
 
