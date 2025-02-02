@@ -1,0 +1,42 @@
+cmake_minimum_required(VERSION 3.30 FATAL_ERROR)
+
+
+add_library(External_LIbrary INTERFACE)                                            #Adding an interface to make it easier to connect external libraries to a project
+
+
+#=================================DPP=================================
+set(BUILD_SHARED_LIBS OFF)
+# set(DPP_INSTALL OFF)
+# set(DPP_BUILD_TEST OFF)
+# set(DPP_NO_VCPKG ON)
+# set(DPP_NO_CONAN ON)
+# set(DPP_FORMATTERS ON)
+
+# set(DPP_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/DPP/include")
+
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/DPP")  
+target_link_libraries(External_LIbrary INTERFACE dpp::dpp)
+# target_include_directories(External_LIbrary ${DPP_INCLUDE})
+#=================================DPP=================================
+
+
+#=================================spdlog=================================
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/spdlog")  
+target_link_libraries(External_LIbrary INTERFACE spdlog::spdlog)
+#=================================spdlog=================================
+
+#=================================SDL=================================
+set(SDL_SHARED OFF)
+set(SDL_STATIC ON)
+
+set(SDL_TEST_LIBRARY OFF)
+set(SDL_TESTS OFF)
+
+set(SDL_DISABLE_INSTALL ON)
+set(SDL_DISABLE_INSTALL_DOCS ON)
+set(SDL_INSTALL_TESTS ON)
+
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/SDL")  
+target_link_libraries(External_LIbrary INTERFACE SDL3::SDL3)
+#=================================SDL=================================
+

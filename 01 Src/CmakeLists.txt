@@ -41,6 +41,6 @@ target_sources(${PROJECT_NAME} PRIVATE main.cpp ${HPP} ${CPP})  # Binding code r
 #==============================Initializing_the project_and_linking_files================================
 
 #===========================================Target_Link=============================================
-# target_link_libraries(${PROJECT_NAME} PRIVATE External_LIbrary)
+target_link_libraries(${PROJECT_NAME} PRIVATE External_LIbrary)
 # target_link_libraries(${PROJECT_NAME} PRIVATE Internal_Library)
 #===========================================Target_Link=============================================
